@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: monospace;
+    overflow-x: hidden;
+    
+    
+}
+
+/* navbar */
+nav {
+    display: flex;
+    background-color: steelblue;
+    justify-content: space-around;
+    /* padding: 20px 0; */
+    height: 50px;
+    align-items: center;
+    color: rgb(135, 247, 31);
+
+}
+
+
+nav .logo {
+
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+    letter-spacing: 3px;
+    
+}
+
+nav ul {
+    display: flex;
+    list-style: none; 
+    width: 40%;
+    justify-content: space-between;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(228, 243, 255);
+
+}
+
+
+
+nav ul li a:hover {
+    color: rgb(12, 11, 12);
+}
+
+
+/* tumpukan menu */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+
+}
+
+.menu-toggle input {
+    position: absolute;
+    width: 40px;
+    height: 28px;
+    left:-6px;
+    top: -3px;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: rgb(141, 189, 228);
+    transition: all 0,5s;
+    
+}
+
+/* animasi tumpukan menu */
+.menu-toggle input:checked ~ span {
+    background-color: floralwhite;
+    transform: rotate(45deg)
+    
+}
+
+
+
+
+
+/* responsive break point */
+
+/* tablet */
+@media screen and (max-width: 768px) {
+    nav ul {
+        width: 50%;
+    }
+}
+
+/* mobile */
+@media screen and (max-width: 576px) {
+    .menu-toggle {
+        display: flex;
+    }
+    nav ul {
+        background-color: steelblue;
+        display: absolute;
+        right: 0;
+        top: 0;
+        width: 80%;
+        height: 100vh;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        z-index: -1;
+        transform: translateX(100%);
+        transform: all 1s;
+    }    
+}
+    
+
+nav ul.slide {
+    transform: translateX(0);
+}
+
+
+
+.content {
+    width: 960px;
+    /* height: 960px; */
+    margin: auto;
+    background-color: rgb(129, 202, 231);
+    overflow: auto;
+}
+
+    
+.main {
+    width: 760px;
+    height: auto;
+    background-color: slategrey;
+    margin: auto;
+    float: right;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+} 
+
+.main .image-box {
+    width: 500px;
+    height: 300px;
+    padding-bottom: 8px;
+    
+}
+
+.main .image-box img {
+    width: 100%;
+    height: 100%;
+    
+}
+
+.main .teks-box h2 {
+    padding-bottom: 5px;
+}
+
+
+.sidebar {
+    width: 180px;
+    height: 1200px;
+    background-color: teal;
+    margin: auto;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 8px;
+    padding-top: 10px;
+    
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: rgb(228, 243, 255);
+    
+}
+
+.sidebar ul li a:hover {
+    color: rgb(235, 238, 49);
+}
+
+
+
+/* style carousel */
+
+.carousel-contain {
+    
+}
+
+
+.footer {
+    width: 960px;
+    height: 120px;
+    margin: auto;
+    box-sizing: border-box;
+    background-color: rgb(19, 54, 54);
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.footer p {
+    color: rgb(228, 243, 255);
+
+}
+
+
+
+
+
+
+    
+
+
+
+
